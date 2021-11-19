@@ -1,0 +1,2 @@
+PeriodicType = [GroupA,GroupB]
+GroupA
