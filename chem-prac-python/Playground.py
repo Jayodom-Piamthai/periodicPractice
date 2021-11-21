@@ -1,12 +1,7 @@
-
-from numpy import isin
-
-import numpy as np
-a = (1,2,3)
-sigma = 3
-input()
-if sigma in input:
-    print("sigma is in that list")
-else :
-    print ("fuck")
-    
+import random
+from tkinter import Variable
+a1 = ["a","b","c"]
+sampled_list = random.sample(a1,1)
+print(sampled_list)
+answer = input()
+print(sampled_list)
