@@ -49,7 +49,7 @@ def GroupBTest():
         else:
             print("incorrect")
             testA=testA + 1
-    print(f"your score is {pointA}")
+    print(f"your score is {pointB}")
 
 def PTPinitiate():
     gameMode = input()
