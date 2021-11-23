@@ -38,13 +38,18 @@ def GroupATest():
     
 
 def GroupBTest():
-    sampled_list = random.sample(GroupBList, 20)
-    print(sampled_list)
-    print("ready...")
-    time.sleep(10)
-    print("GO!")
-    time.sleep(30)
-    print("TIME'S UP SUCKER!")
+    testB=0 ; pointB=0
+    while testB < 20 :
+        sampled_list = random.sample(GroupBList,1)
+        print(sampled_list)
+        input("is in:")
+        if sampled_list in list(input) :
+            print("correct")
+            testA=testA + 1 ; pointB = pointB + 1
+        else:
+            print("incorrect")
+            testA=testA + 1
+    print(f"your score is {pointA}")
 
 def PTPinitiate():
     gameMode = input()
