@@ -3,7 +3,7 @@ from re import A
 import time
 import tkinter
 
-GroupAList = ['h','li','na','k','rb','cs','fr','be','mg','ca','sr','b','al','ga','in','tl','nh','c','si','ge','sn','pb','fl','n','p','as','sb','bi','mc','o','s','se','te','po','lv','f','cl','br','i','at','ts','he','ne','ar','kr','xe','rn','og']
+GroupAList = ('h','li','na','k','rb','cs','fr','be','mg','ca','sr','b','al','ga','in','tl','nh','c','si','ge','sn','pb','fl','n','p','as','sb','bi','mc','o','s','se','te','po','lv','f','cl','br','i','at','ts','he','ne','ar','kr','xe','rn','og')
 a1 = ['h','li','na','k','rb','cs','fr']
 a2 = ['be','mg','ca','sr','ba','ra']
 a3 = ['b','al','ga','in','tl','nh']
