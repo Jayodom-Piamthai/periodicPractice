@@ -23,12 +23,29 @@ b7 = ('Mn','Tc','Re','Bh')
 b8 = ('Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn')
 
 def GroupATest():
-    testA=0 ; pointA=0
+    testA=0 ; pointA=0 ; correctAnswer = 0
     while testA < 20 :
         sampled_list = random.sample(GroupAList,1)
         print(sampled_list)
-        input("is in:")
-        if sampled_list in list(input) :
+        if sampled_list in a1 :
+            correctAnswer = correctAnswer*0+1
+        elif sampled_list in a2 :
+            correctAnswer = correctAnswer*0+2
+        elif sampled_list in a3 :
+            correctAnswer = correctAnswer*0+3
+        elif sampled_list in a4 :
+            correctAnswer = correctAnswer*0+4
+        elif sampled_list in a5 :
+            correctAnswer = correctAnswer*0+5
+        elif sampled_list in a6 :
+            correctAnswer = correctAnswer*0+6
+        elif sampled_list in a7 :
+            correctAnswer = correctAnswer*0+7
+        elif sampled_list in a8 :
+            correctAnswer = correctAnswer*0+8
+        print(correctAnswer)
+        answer = input("is in:A")
+        if correctAnswer == int(answer):
             print("correct")
             testA=testA + 1 ; pointA = pointA + 1
         else:
