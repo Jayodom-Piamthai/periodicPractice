@@ -27,28 +27,29 @@ def GroupATest():
     while testA < 20 :
         sampled_list = random.sample(GroupAList,1)
         print(sampled_list)
-        if sampled_list in a1 :
+        if (sampled_list[0]) in a1 :
             correctAnswer = correctAnswer*0+1
-        elif sampled_list in a2 :
+        elif (sampled_list[0]) in a2 :
             correctAnswer = correctAnswer*0+2
-        elif sampled_list in a3 :
+        elif (sampled_list[0]) in a3 :
             correctAnswer = correctAnswer*0+3
-        elif sampled_list in a4 :
+        elif (sampled_list[0]) in a4 :
             correctAnswer = correctAnswer*0+4
-        elif sampled_list in a5 :
+        elif (sampled_list[0]) in a5 :
             correctAnswer = correctAnswer*0+5
-        elif sampled_list in a6 :
+        elif (sampled_list[0]) in a6 :
             correctAnswer = correctAnswer*0+6
-        elif sampled_list in a7 :
+        elif (sampled_list[0]) in a7 :
             correctAnswer = correctAnswer*0+7
-        elif sampled_list in a8 :
+        elif (sampled_list[0]) in a8 :
             correctAnswer = correctAnswer*0+8
-        print(correctAnswer)
+        #print(correctAnswer)  #//value test//
         answer = input("is in:A")
-        if correctAnswer == int(answer):
-            print("correct")
-            testA=testA + 1 ; pointA = pointA + 1
-        else:
+        try:
+            if correctAnswer == int(answer):
+                print("correct")
+                testA=testA + 1 ; pointA = pointA + 1
+        except:
             print("incorrect")
             testA=testA + 1
     print(f"your score is {pointA}")
@@ -60,7 +61,7 @@ def GroupBTest():
         sampled_list = random.sample(GroupBList,1)
         print(sampled_list)
         input("is in:")
-        if sampled_list in list(input) :
+        if (sampled_list[0]) in list(input) :
             print("correct")
             testA=testA + 1 ; pointB = pointB + 1
         else:
