@@ -49,6 +49,9 @@ def GroupATest():
             if correctAnswer == int(answer):
                 print("correct")
                 testA=testA + 1 ; pointA = pointA + 1
+            else:
+                print("incorrect")
+                testA=testA + 1
         except:
             print("incorrect")
             testA=testA + 1
@@ -60,14 +63,34 @@ def GroupBTest():
     while testB < 20 :
         sampled_list = random.sample(GroupBList,1)
         print(sampled_list)
-        input("is in:")
-        if (sampled_list[0]) in list(input) :
-            print("correct")
-            testA=testA + 1 ; pointB = pointB + 1
-        else:
+        if (sampled_list[0]) in b1 :
+            correctAnswer = correctAnswer*0+1
+        elif (sampled_list[0]) in b2 :
+            correctAnswer = correctAnswer*0+2
+        elif (sampled_list[0]) in b3 :
+            correctAnswer = correctAnswer*0+3
+        elif (sampled_list[0]) in b4 :
+            correctAnswer = correctAnswer*0+4
+        elif (sampled_list[0]) in b5 :
+            correctAnswer = correctAnswer*0+5
+        elif (sampled_list[0]) in b6 :
+            correctAnswer = correctAnswer*0+6
+        elif (sampled_list[0]) in b7 :
+            correctAnswer = correctAnswer*0+7
+        elif (sampled_list[0]) in b8 :
+            correctAnswer = correctAnswer*0+8
+        #print(correctAnswer)  #//value test//
+        answer = input("is in:B")
+        try:
+            if correctAnswer == int(answer):
+                print("correct")
+                testB=testB + 1 ; pointB = pointB + 1
+            else:
+                print("incorrect")
+                testB=testB + 1
+        except:
             print("incorrect")
-            testA=testA + 1
-    print(f"your score is {pointB}")
+            testB=testB + 1
 
 def PTPinitiate():
     gameMode = input()
