@@ -57,7 +57,6 @@ def GroupATest():
             testA=testA + 1
     print(f"your score is {pointA}")
     
-
 def GroupBTest():
     testB=0 ; pointB=0
     while testB < 20 :
@@ -91,16 +90,15 @@ def GroupBTest():
         except:
             print("incorrect")
             testB=testB + 1
-
 def PTPinitiate():
-    gameMode = input()
-    if gameMode == "T1" :
-        GroupATest()
-    elif gameMode == "T2" :
-        GroupBTest()
-    else :
-        print("ERROR:try again")
-        PTPinitiate()
+    while 1>0 :
+        gameMode = input()
+        if gameMode == "T1" :
+            GroupATest()
+        elif gameMode == "T2" :
+            GroupBTest()
+        else :
+            print("ERROR:try again")
 
 print("Welcome to Periodic Table Practice" )
 print("How To Play:choose your prefered mode by type T1,T2,which will also start the round" )
