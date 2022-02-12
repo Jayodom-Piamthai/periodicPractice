@@ -11,16 +11,17 @@ a4 = ['c','si','ge','sn','pb','fl']
 a5 = ['n','p','as','sb','bi','mc']
 a6 = ['o','s','se','te','po','lv']
 a7 = ['f','cl','br','i','at','ts']
-a8 = ('he','ne','ar','kr','xe','rn','og') 
-GroupBList = ['Sc','Y','La','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu','Ac','Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr','Ti','Zr','Hf','Rf','V','Nb','Ta','Db','Cr','Mo','W','Sg','Mn','Tc','Re','Bh','Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn']
-b1 = ('Cu','Ag','Au','Rg')
-b2 = ('Zn','Cd','Hg','Cn')
-b3 = ('Sc','Y','La','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu','Ac','Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr')
-b4 = ('Ti','Zr','Hf','Rf')
-b5 = ('V','Nb','Ta','Db')
-b6 = ('Cr','Mo','W','Sg')
-b7 = ('Mn','Tc','Re','Bh')
-b8 = ('Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn')
+a8 = ['he','ne','ar','kr','xe','rn','og'] 
+GroupBList = ('Sc','Y','La','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu','Ac','Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr','Ti','Zr','Hf','Rf','V','Nb','Ta','Db','Cr','Mo','W','Sg','Mn','Tc','Re','Bh','Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn')
+b1 = ['Cu','Ag','Au','Rg']
+b2 = ['Zn','Cd','Hg','Cn']
+b3 = ['Sc','Y','La','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu','Ac','Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr']
+b4 = ['Ti','Zr','Hf','Rf']
+b5 = ['V','Nb','Ta','Db']
+b6 = ['Cr','Mo','W','Sg']
+b7 = ['Mn','Tc','Re','Bh']
+b8 = ['Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn']
+IncorrectAnswer = list( )
 
 def GroupATest():
     testA=0 ; pointA=0 ; correctAnswer = 0
@@ -52,14 +53,20 @@ def GroupATest():
             else:
                 print("incorrect")
                 testA=testA + 1
+                IncorrectAnswer.append(f"{sampled_list}(A{correctAnswer})" )
         except:
             print("incorrect")
             testA=testA + 1
+            IncorrectAnswer.append(f"{sampled_list}(A{correctAnswer})" )
     print(f"your score is {pointA}")
+    print(f"incorrect elements are: {IncorrectAnswer}")
+    print("to play again,please press ENTER")
+    input()
+    print("T1 = Group A only test,T2 = Group B only test" )
+    PTPinitiate()
     
-
 def GroupBTest():
-    testB=0 ; pointB=0
+    testB=0 ; pointB=0 ; correctAnswer = 0
     while testB < 20 :
         sampled_list = random.sample(GroupBList,1)
         print(sampled_list)
@@ -88,19 +95,27 @@ def GroupBTest():
             else:
                 print("incorrect")
                 testB=testB + 1
+                IncorrectAnswer.append(f"{sampled_list}(B{correctAnswer})" )
         except:
             print("incorrect")
             testB=testB + 1
+            IncorrectAnswer.append(f"{sampled_list}(B{correctAnswer})" )
+    print(f"your score is {pointB}")
+    print(f"incorrect elements are: {IncorrectAnswer}")
+    print("to play again,please press ENTER")
+    input()
+    print("T1 = Group A only test,T2 = Group B only test" )
+    PTPinitiate()
 
 def PTPinitiate():
-    gameMode = input()
-    if gameMode == "T1" :
-        GroupATest()
-    elif gameMode == "T2" :
-        GroupBTest()
-    else :
-        print("ERROR:try again")
-        PTPinitiate()
+    while 1>0 :
+        gameMode = input()
+        if gameMode == "T1" :
+            GroupATest()
+        elif gameMode == "T2" :
+            GroupBTest()
+        else :
+            print("ERROR:try again")
 
 print("Welcome to Periodic Table Practice" )
 print("How To Play:choose your prefered mode by type T1,T2,which will also start the round" )
