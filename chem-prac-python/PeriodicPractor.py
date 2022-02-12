@@ -21,6 +21,7 @@ b5 = ('V','Nb','Ta','Db')
 b6 = ('Cr','Mo','W','Sg')
 b7 = ('Mn','Tc','Re','Bh')
 b8 = ('Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn')
+IncorrectAnswer = list( )
 
 def GroupATest():
     testA=0 ; pointA=0 ; correctAnswer = 0
@@ -52,10 +53,13 @@ def GroupATest():
             else:
                 print("incorrect")
                 testA=testA + 1
+                IncorrectAnswer.append(f"{sampled_list}(A{correctAnswer})" )
         except:
             print("incorrect")
             testA=testA + 1
+            IncorrectAnswer.append(f"{sampled_list}(A{correctAnswer})" )
     print(f"your score is {pointA}")
+    print(f"incorrect elements are: {IncorrectAnswer}")
     
 def GroupBTest():
     testB=0 ; pointB=0
@@ -87,9 +91,13 @@ def GroupBTest():
             else:
                 print("incorrect")
                 testB=testB + 1
+                IncorrectAnswer.append(f"{sampled_list}(B{correctAnswer})" )
         except:
             print("incorrect")
             testB=testB + 1
+            IncorrectAnswer.append(f"{sampled_list}(B{correctAnswer})" )
+    print(f"your score is {pointB}")
+    print(f"incorrect elements are: {IncorrectAnswer}")
 def PTPinitiate():
     while 1>0 :
         gameMode = input()
