@@ -25,4 +25,7 @@ IncorrectAnswer = list( )
 sampled_list = random.sample(GroupAList,1)
 frameA=LabelFrame(root,text="//Group A Elements//",padx=68,pady=38)
 frameA.grid(row=0,column=0,padx=5,pady=5)
-question=Labelframe(frameA,text=str(sampled_list)
+question=Label(frameA,text=f"{sampled_list}",font=(20))
+question.grid(row=0,columnspan=69)
+
+mainloop()
