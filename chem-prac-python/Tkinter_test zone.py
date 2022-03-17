@@ -1,6 +1,10 @@
 from tkinter import *
-import random
 from tkinter.ttk import Labelframe
+import random
+import time
+
+
+
 #Remember the day,ace,remember the 29th of june,2019,yes,DONT EVER forget it
 root=Tk()
 root.title("Periodic Practice")
@@ -10,6 +14,7 @@ root.iconbitmap("projectAndShits(transparent).ico")
 frame=LabelFrame(root,text="//Main Menu//",padx=68,pady=38)
 frame.grid(row=0,column=0,padx=5,pady=5)
 
+#PereodicTable           #what a hastle
 GroupAList = ('h','li','na','k','rb','cs','fr','be','mg','ca','sr','b','al','ga','in','tl','nh','c','si','ge','sn','pb','fl','n','p','as','sb','bi','mc','o','s','se','te','po','lv','f','cl','br','i','at','ts','he','ne','ar','kr','xe','rn','og')
 a1 = ['h','li','na','k','rb','cs','fr']
 a2 = ['be','mg','ca','sr','ba','ra']
@@ -30,15 +35,31 @@ b7 = ['Mn','Tc','Re','Bh']
 b8 = ['Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn']
 IncorrectAnswer = list( )
 
+
 #GroupATest
 def initiateA():
     transition()
-    frameA=LabelFrame(root,text="//Group A Elements//",padx=68,pady=38)
-    frameA.grid(row=0,column=0,padx=5,pady=5)
+
+    #randomizer/limiter
     testA=0 ; pointA=0 ; correctAnswer = 0
     while testA < 20 :
         sampled_list = random.sample(GroupAList,1)
-        print(sampled_list)
+
+        #answerUI
+        frameA=LabelFrame(root,text="//Group A Elements//",padx=100,pady=100)
+        frameA.grid(row=0,column=0,padx=5,pady=5)
+        question=Label(frameA,text=f"{sampled_list}",font=(80))
+        question.grid(row=1,columnspan=69)
+        ChoiceA=[
+            ("A1",1,2,0),("A2",2,2,1),("A3",3,2,2),("A4",4,2,3),
+            ("A5",5,3,0),("A6",6,3,1),("A7",7,3,2),("A8",8,3,3),
+        ]
+        answer= IntVar()
+        answer.get()
+        for choiceText,answerInput,rowPos,columnPos in ChoiceA:
+            Radiobutton(frameA,text=choiceText,variable=answer,value=answerInput).grid(row=rowPos,column=columnPos)
+
+        ConfirmedAnswer=0
         if (sampled_list[0]) in a1 :
             correctAnswer = correctAnswer*0+1
         elif (sampled_list[0]) in a2 :
@@ -55,12 +76,12 @@ def initiateA():
             correctAnswer = correctAnswer*0+7
         elif (sampled_list[0]) in a8 :
             correctAnswer = correctAnswer*0+8
-        #print(correctAnswer)  #//value test//
-        answer = input("is in:A")
-        question=Labelframe(frameA,text=f"{sampled_list}")
-        question.grid(row=1,columnspan=3,)
+        print(correctAnswer)  #//value test//
+        
+        
+        answer==ConfirmedAnswer
         try:
-            if correctAnswer == int(answer):
+            if correctAnswer == int(ConfirmedAnswer):
                 print("correct")
                 testA=testA + 1 ; pointA = pointA + 1
             else:
@@ -71,7 +92,9 @@ def initiateA():
             print("incorrect")
             testA=testA + 1
             IncorrectAnswer.append(f"{sampled_list}(A{correctAnswer})" )
-
+        #submit
+        submit=Button(frameA,text="Submit Answer")
+        submit.grid(row=4,columnspan=69)
 
 #GroupBTest
 def initiateB():
