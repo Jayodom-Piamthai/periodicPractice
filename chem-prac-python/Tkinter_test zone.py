@@ -55,9 +55,19 @@ def initiateA():
             ("A5",5,3,0),("A6",6,3,1),("A7",7,3,2),("A8",8,3,3),
         ]
         answer= IntVar()
-        answer.get()
+        answer.set("A1")
         for choiceText,answerInput,rowPos,columnPos in ChoiceA:
             Radiobutton(frameA,text=choiceText,variable=answer,value=answerInput).grid(row=rowPos,column=columnPos)
+        
+        
+        ConfirmedAnswer == answerInput
+        if correctAnswer == int(ConfirmedAnswer):
+            print("correct")
+            testA=testA + 1 ; pointA = pointA + 1
+        else:
+            print("incorrect")
+            testA=testA + 1
+            IncorrectAnswer.append(f"{sampled_list}(A{correctAnswer})" )
 
         ConfirmedAnswer=0
         if (sampled_list[0]) in a1 :
@@ -78,20 +88,6 @@ def initiateA():
             correctAnswer = correctAnswer*0+8
         print(correctAnswer)  #//value test//
         
-        
-        answer==ConfirmedAnswer
-        try:
-            if correctAnswer == int(ConfirmedAnswer):
-                print("correct")
-                testA=testA + 1 ; pointA = pointA + 1
-            else:
-                print("incorrect")
-                testA=testA + 1
-                IncorrectAnswer.append(f"{sampled_list}(A{correctAnswer})" )
-        except:
-            print("incorrect")
-            testA=testA + 1
-            IncorrectAnswer.append(f"{sampled_list}(A{correctAnswer})" )
         #submit
         submit=Button(frameA,text="Submit Answer")
         submit.grid(row=4,columnspan=69)
