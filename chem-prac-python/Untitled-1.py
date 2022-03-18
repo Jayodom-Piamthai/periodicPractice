@@ -1,3 +1,4 @@
+from multiprocessing.sharedctypes import Value
 from tkinter import *
 import random
 root=Tk()
@@ -22,10 +23,23 @@ b8 = ['Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au'
 IncorrectAnswer = list( )
 
 
-sampled_list = random.sample(GroupAList,1)
-frameA=LabelFrame(root,text="//Group A Elements//",padx=68,pady=38)
+sampled_list = random.sample(a1,1)
+#answerUI
+frameA=LabelFrame(root,text="//Group A Elements//",padx=100,pady=100)
 frameA.grid(row=0,column=0,padx=5,pady=5)
-question=Label(frameA,text=f"{sampled_list}",font=(20))
-question.grid(row=0,columnspan=69)
+question=Label(frameA,text=f"{sampled_list}",font=(80))
+question.grid(row=1,columnspan=69)
+ChoiceA=[
+    ("A1",1,2,0),("A2",2,2,1),("A3",3,2,2),("A4",4,2,3),
+    ("A5",5,3,0),("A6",6,3,1),("A7",7,3,2),("A8",8,3,3),
+]
+answer= IntVar()
+answer.set("A1")
+for choiceText,answerInput,rowPos,columnPos in ChoiceA:
+    Radiobutton(frameA,text=choiceText,variable=answer,value=answerInput).grid(row=rowPos,column=columnPos)
+def clicked(value):
+    print(value)
+submit=Button(frameA,text="Submit Answer",command=lambda:clicked(answer.get()))
+submit.grid(row=4,columnspan=69)
 
 mainloop()
