@@ -1,17 +1,13 @@
 from tkinter import *
 from tkinter.ttk import Labelframe
 import random
-import time
 
-
+#------------------///////////////////////------------------------////////////////////////---------------------------------////////////////////////////--------------------------
 
 #Remember the day,ace,remember the 29th of june,2019,yes,DONT EVER forget it
 root=Tk()
 root.title("Periodic Practice")
 root.iconbitmap("projectAndShits(transparent).ico")
-
-
-
 
 #PereodicTable           #what a hastle
 GroupAList = ('h','li','na','k','rb','cs','fr','be','mg','ca','sr','b','al','ga','in','tl','nh','c','si','ge','sn','pb','fl','n','p','as','sb','bi','mc','o','s','se','te','po','lv','f','cl','br','i','at','ts','he','ne','ar','kr','xe','rn','og')
@@ -32,8 +28,6 @@ b5 = ['V','Nb','Ta','Db']
 b6 = ['Cr','Mo','W','Sg']
 b7 = ['Mn','Tc','Re','Bh']
 b8 = ['Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn']
-IncorrectAnswer = list( )
-
 
 #GroupATest
 def initiateA():
@@ -259,6 +253,7 @@ def transition():
     #frameForget
     frame.grid_forget()
 
-
-
 root.mainloop()
+
+
+#Ace,you've done well,well,its not as we initially planned,with all those 20-limit and shits,but HEY!,we did it,yo. nicely done,at least for now,till next time.
