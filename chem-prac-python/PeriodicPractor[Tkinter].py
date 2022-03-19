@@ -5,20 +5,21 @@ import random
 #------------------///////////////////////------------------------////////////////////////---------------------------------////////////////////////////--------------------------
 
 #Remember the day,ace,remember the 29th of june,2019,yes,DONT EVER forget it
+#19/03/22-ตามตรงนะ SSHก็น่าสนนะ,เอซ
 root=Tk()
 root.title("Periodic Practice")
 root.iconbitmap("projectAndShits(transparent).ico")
 
 #PereodicTable           #what a hastle
-GroupAList = ('h','li','na','k','rb','cs','fr','be','mg','ca','sr','b','al','ga','in','tl','nh','c','si','ge','sn','pb','fl','n','p','as','sb','bi','mc','o','s','se','te','po','lv','f','cl','br','i','at','ts','he','ne','ar','kr','xe','rn','og')
-a1 = ['h','li','na','k','rb','cs','fr']
-a2 = ['be','mg','ca','sr','ba','ra']
-a3 = ['b','al','ga','in','tl','nh']
-a4 = ['c','si','ge','sn','pb','fl']
-a5 = ['n','p','as','sb','bi','mc']
-a6 = ['o','s','se','te','po','lv']
-a7 = ['f','cl','br','i','at','ts']
-a8 = ['he','ne','ar','kr','xe','rn','og'] 
+GroupAList = ('H','Li','Na','K','Rb','Cs','Fr','Be','Mg','Ca','Sr','Ba','Ra','B','Al','Ga','In','Tl','Nh','C','Si','Ge','Sn','Pb','Fl','N','P','As','Sb','Bi','Mc','O','S','Se','Te','Po','Lv','F','Cl','Br','I','At','Ts','He','Ne','Ar','Kr','Xe','Rn','Og')
+a1 = ['H','Li','Na','K','Rb','Cs','Fr']
+a2 = ['Be','Mg','Ca','Sr','Ba','Ra']
+a3 = ['B','Al','Ga','In','Tl','Nh']
+a4 = ['C','Si','Ge','Sn','Pb','Fl']
+a5 = ['N','P','As','Sb','Bi','Mc']
+a6 = ['O','S','Se','Te','Po','Lv']
+a7 = ['F','Cl','Br','I','At','Ts']
+a8 = ['He','Ne','Ar','Kr','Xe','Rn','Og'] 
 GroupBList = ('Sc','Y','La','Ce','Pr','Nd','Pm','Sm','Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu','Ac','Th','Pa','U','Np','Pu','Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr','Ti','Zr','Hf','Rf','V','Nb','Ta','Db','Cr','Mo','W','Sg','Mn','Tc','Re','Bh','Fe','Ru','Os','Hs','Co','Rh','Ir','Mt','Ni','Pd','Pt','Ds','Cu','Ag','Au','Rg','Zn','Cd','Hg','Cn')
 b1 = ['Cu','Ag','Au','Rg']
 b2 = ['Zn','Cd','Hg','Cn']
