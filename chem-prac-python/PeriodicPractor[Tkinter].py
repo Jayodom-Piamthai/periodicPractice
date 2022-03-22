@@ -8,7 +8,6 @@ import random
 #19/03/22-ตามตรงนะ SSHก็น่าสนนะ,เอซ
 root=Tk()
 root.title("Periodic Practice")
-root.iconbitmap("projectAndShits(transparent).ico")
 
 #PereodicTable           #what a hastle
 GroupAList = ('H','Li','Na','K','Rb','Cs','Fr','Be','Mg','Ca','Sr','Ba','Ra','B','Al','Ga','In','Tl','Nh','C','Si','Ge','Sn','Pb','Fl','N','P','As','Sb','Bi','Mc','O','S','Se','Te','Po','Lv','F','Cl','Br','I','At','Ts','He','Ne','Ar','Kr','Xe','Rn','Og')
